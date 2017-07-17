@@ -22,7 +22,7 @@ import profi_soft.com.notificationcenter_android.notification_center.helpers.Mut
 
 public class MainActivity extends AppCompatActivity {
 
-    private List<MutableDictionary> items = new ArrayList<>();
+    private List<String> items = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +37,7 @@ public class MainActivity extends AppCompatActivity {
         ListView myList = (ListView) surface.findViewById(R.id.surface_view);
 
         for(int a = 0; a < Config.CONTENT_SIZE; a++){
-            MutableDictionary dictionary = new MutableDictionary();
-            dictionary.setObject(String.format(Locale.getDefault(), getString(R.string.item_counter), a), Config.ITEM_LABEL);
-
-            items.add(dictionary);
+            items.add(String.format(Locale.getDefault(), getString(R.string.item_counter), a));
         }
 
         Button postNotificationFromMainActivity = (Button) surface.findViewById(R.id.button_send_notifications_to_items);
@@ -99,15 +96,9 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View getView(final int position, View convertView, ViewGroup parent) {
 
-            MutableDictionary listItem = items.get(position);
-            ListSingleItem cell;
-
-            if(listItem.objectForKey(Config.ITEM_CELL) == null){
-                cell = new ListSingleItem(listItem, MainActivity.this, parent, position);
-                cell.setupObserver();
-            } else {
-                cell = (ListSingleItem)listItem.objectForKey(Config.ITEM_CELL);
-            }
+            String listItem = items.get(position);
+            ListSingleItem cell = new ListSingleItem(listItem, MainActivity.this, parent, position);
+            cell.setupObserver();
 
             return cell.view;
         }

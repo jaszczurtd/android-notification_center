@@ -11,7 +11,6 @@ public interface Config {
 
     //item container dictionary accessors
     String ITEM_LABEL      = "ITEM_LABEL";
-    String ITEM_CELL       = "ITEM_CELL";
 
     //notification names
     String NOTIFICATION_FROM_LIST           = "NOTIFICATION_FROM_LIST";
