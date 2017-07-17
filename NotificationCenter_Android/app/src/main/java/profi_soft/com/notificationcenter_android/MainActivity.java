@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        public View getView(final int position, View convertView, ViewGroup parent) {
+        public View getView(int position, View convertView, ViewGroup parent) {
 
             String listItem = items.get(position);
             ListSingleItem cell = new ListSingleItem(listItem, MainActivity.this, parent, position);
