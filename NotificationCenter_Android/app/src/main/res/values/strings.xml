@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">NotificationCenter_Android</string>
+    <string name="app_name">Notification Center for Android</string>
+
+    <string name="item_counter">"This is item number: %1$d"</string>
+    <string name="item_response">Put response from me</string>
+    <string name="item_answer_button">Send message from me!</string>
+    <string name="no_messages">Waiting for messages from list items&#8230;</string>
+    <string name="got_message_from_item">"Got message from item number: %1$d!"</string>
+    <string name="item_send_list_items">"Send message to list items!"</string>
+    <string name="received_notification">"Got notification from Main Activity!"</string>
+
 </resources>
