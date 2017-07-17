@@ -18,7 +18,6 @@ import java.util.Locale;
 import profi_soft.com.notificationcenter_android.notification_center.Config;
 import profi_soft.com.notificationcenter_android.notification_center.NotificationCenter;
 import profi_soft.com.notificationcenter_android.notification_center.NotificationCenterInterface;
-import profi_soft.com.notificationcenter_android.notification_center.helpers.MutableDictionary;
 
 public class MainActivity extends AppCompatActivity {
 
